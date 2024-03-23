@@ -47,7 +47,7 @@ Unsuccessfull Register With Password Only
     Should Be Equal As Strings    ${error_message}    Missing email or username
 
 
-Unsuccessfull Login With Invalid Email
+Unsuccessfull Register With Invalid Email
     Create Session With Headers    register
     ${payload}    Create Dictionary    email=${INVALID_EMAIL}   password=${PASSWORD}    
     ${response}   POST On Session    register    /api/register    json=${payload}     expected_status=400
